@@ -1,0 +1,32 @@
+{
+  "Private": {
+    "description": "Uncontrolled branch where non-public signals can be defined.", 
+    "type": "branch", 
+    "children": {}
+  }, 
+  "Vehicle": {
+    "type": "branch", 
+    "children": {
+      "VehicleSpeed": {
+        "type": "branch", 
+        "children": {
+          "Timestamp": {
+            "description": "Common data timestamp attached to all data signals", 
+            "type": "String", 
+            "id": -1
+          }, 
+          "Speed": {
+            "description": "Vehicle speed in kilometers per hour", 
+            "min": 0, 
+            "max": 300, 
+            "type": "unsigned integer", 
+            "id": -1, 
+            "unit": "km/h"
+          }
+        }, 
+        "description": "Vehicle speed data"
+      }
+    }, 
+    "description": "Vehicle W3C data spec."
+  }
+}
