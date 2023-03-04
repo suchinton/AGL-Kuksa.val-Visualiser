@@ -1,0 +1,74 @@
+{
+    "name": "python3-kuksa_client",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"kuksa_client\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/fb/6e/6f83bf616d2becdf333a1640f1d463fef3150e2e926b7010cb0f81c95e88/attrs-22.2.0-py3-none-any.whl",
+            "sha256": "29e95c7f6778868dbd49170f98f8818f78f3dc5e0e37c0b1f474e3561b240836"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/15/8b/15061b32332bb35ea2a2f6263d0f616779d576e82739ec8e7fcf3c94abf5/cmd2-1.5.0-py3-none-any.whl",
+            "sha256": "31aaeb590ec7bd2cc2cee0172099cc6f0a1396f82ab7bc389dbff23d9b90f6ec"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl",
+            "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/d5/50/83c593b07763e1161326b3b8c6686f0f4b0f24d5526546bee538c89837d6/decorator-5.1.1-py3-none-any.whl",
+            "sha256": "b8c3f85900b9dc423225913c5aace94729fe1fa9763b38939a95226f02d37186"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/f9/d1/8e1d6f684e36492476e1d6bbbf0162f8021421d9880fc346620d29f3c5a6/grpcio-1.51.3.tar.gz",
+            "sha256": "be7b2265b7527bb12109a7727581e274170766d5b3c9258d4e466f4872522d7a"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/17/2f/920a3be02901c5b46f672e7d26ec81a316e111ffc9b3635dab4b71fc2080/grpcio-tools-1.51.3.tar.gz",
+            "sha256": "4fea28e3dd31871579a57058796a78093c75b74b74e9de2f2b7a7fd9a443d403"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/4c/b7/3627068d9aa6b2d49af117eb3897770a5dbc6bb3f4c09ed56a9eb749438e/jsonpath_ng-1.5.3-py3-none-any.whl",
+            "sha256": "292a93569d74029ba75ac2dc3d3630fc0e17b2df26119a165fa1d498ca47bf65"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/19/05/42f6d26b27615f9156ec20fcdf89b7370127c3b2c8cb666e68991c29afd6/kuksa_client-0.3.0-py3-none-any.whl",
+            "sha256": "4f04958f7aee6a2b90a7c71f7b9bce2dfbb4f09895a0abdb8cbca7b938acb742"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/a3/58/35da89ee790598a0700ea49b2a66594140f44dec458c07e8e3d4979137fc/ply-3.11-py2.py3-none-any.whl",
+            "sha256": "096f9b8350b65ebd2fd1346b12452efe5b9607f7482813ffca50c22722a807ce"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/f6/95/797a257a5db4a91dc2bc864c487ead56440014d741933a28c86d966b949e/protobuf-4.22.0.tar.gz",
+            "sha256": "652d8dfece122a24d98eebfef30e31e455d300efa41999d1182e015984ac5930"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/a7/2c/4c64579f847bd5d539803c8b909e54ba087a79d01bb3aba433a95879a6c5/pyperclip-1.8.2.tar.gz",
+            "sha256": "105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/20/f4/c0584a25144ce20bfcf1aecd041768b8c762c1eb0aa77502a3f0baa83f11/wcwidth-0.2.6-py2.py3-none-any.whl",
+            "sha256": "795b138f6875577cd91bba52baf9e445cd5118fd32723b460e30a0af30ea230e"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/85/dc/549a807a53c13fd4a8dac286f117a7a71260defea9ec0c05d6027f2ae273/websockets-10.4.tar.gz",
+            "sha256": "eef610b23933c54d5d921c92578ae5f89813438fded840c2e9809d378dc765d3"
+        }
+    ]
+}

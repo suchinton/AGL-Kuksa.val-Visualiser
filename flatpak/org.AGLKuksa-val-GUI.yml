@@ -1,0 +1,37 @@
+app-id: org.AGL.Kuksa-val-GUI
+runtime: org.kde.Platform
+runtime-version: '5.15-22.08'
+sdk: org.kde.Sdk
+base: com.riverbankcomputing.PyQt.BaseApp
+base-version: 5.15-22.08
+
+command: run.sh
+
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=wayland
+  - --filesystem=host
+  - --device=dri
+modules:
+  - name: AGLKuksa-val-GUI
+    buildsystem: simple
+    build-commands:  
+      - install -D main.py /app/bin/main.py
+      - install -D Main_window.ui /app/bin/Main_window.ui
+      #- mkdir /app/bin/assets
+      - pwd
+      #- cp -r assets/* /app/bin/assets/
+      - install -D run.sh /app/bin/run.sh
+    sources:
+      - type: file
+        path: main.py
+      - type: file
+        path: Main_window.ui
+      #- type: dir
+      #  path: assets
+      - type: file
+        path: run.sh
+
+  - python3-req.json
+  
