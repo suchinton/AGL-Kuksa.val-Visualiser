@@ -7,6 +7,9 @@ base-version: 5.15-22.08
 
 command: run.sh
 
+cleanup-commands:
+  - rm -rf /app/bin/__pycache__
+
 finish-args:
   - --share=ipc
   - --socket=x11

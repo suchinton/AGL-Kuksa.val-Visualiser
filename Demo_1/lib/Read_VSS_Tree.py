@@ -20,7 +20,8 @@ def check_child(data):
 
 # Opening JSON file
 #f = open('../Demo_VSS_tree/new_signal.json')
-f = open('../Demo_VSS_tree/steering_switch_signal.json')
+#f = open('../Demo_VSS_tree/steering_switch_signal.json')
+f = open('../Demo_VSS_tree/vss.json')
   
 # Reading from file
 data = json.loads(f.read())
