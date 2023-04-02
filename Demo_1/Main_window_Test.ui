@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>499</width>
+    <width>523</width>
     <height>374</height>
    </rect>
   </property>
@@ -77,12 +77,6 @@
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="1" rowspan="5" colspan="6">
          <widget class="QLCDNumber" name="Speed_monitor">
-          <property name="cursor">
-           <cursorShape>ArrowCursor</cursorShape>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
@@ -221,9 +215,6 @@
      </layout>
     </item>
     <item>
-     <widget class="QDial" name="dial"/>
-    </item>
-    <item>
      <spacer name="verticalSpacer_3">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -243,7 +234,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>499</width>
+     <width>523</width>
      <height>22</height>
     </rect>
    </property>

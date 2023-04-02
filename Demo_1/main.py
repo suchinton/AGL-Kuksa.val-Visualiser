@@ -1,13 +1,14 @@
-from kuksa_client.grpc import VSSClient
-from kuksa_client.grpc import Datapoint
+# import kuksa_viss_client as kuksa
+import kuksa_client as kuksa
 
 from PyQt5.QtWidgets import QMainWindow, QApplication, QLineEdit,\
-     QPushButton,QToolButton, QLabel, QTabWidget, QSpinBox, QSlider, \
+     QPushButton, QToolButton, QLabel, QTabWidget, QSpinBox, QSlider, \
      QLCDNumber
 from PyQt5.QtCore import *
 from PyQt5 import QtWidgets 
 from PyQt5 import uic
 import sys
+import os
 from threading import *
 
 import time
@@ -47,19 +48,30 @@ class MainWindow(QMainWindow):
         speed = int(self.Speed_slider.value())
         self.Speed_monitor.display(speed)
         try:
-            with VSSClient('127.0.0.1', 55555) as client:
-                client.set_current_values({
-                'Vehicle.Speed': Datapoint(speed),
-                })
+            client.setValue('Vehicle.Speed',str(speed),'value')
+            print(f"Feeding Vehicle.Speed to {speed}")
         except:
             print("Error!! kuksa_client not configured properly.")
 
-
-
 # init the app
 if __name__ == '__main__':
+
+    config = {
+    "hostname": '127.0.0.1',
+    "port": 8090
+    }
+
+    try:
+        client = kuksa.KuksaClientThread(config)
+        client.authorize("/home/suchinton/.local/lib/python3.8/site-packages/kuksa_certificates/jwt/super-admin.json.token")
+        client.start()
+    except Exception as e:
+        print(e)
+    # for speed in range(0,100):
+    #     client.setValue('Vehicle.Speed',str(float(speed)),'value')
+    #     print(f"Feeding Vehicle.Speed to {speed}")
+    #     time.sleep(1)
     
     app = QApplication(sys.argv)
     Main_pg = MainWindow()
     sys.exit(app.exec())
-

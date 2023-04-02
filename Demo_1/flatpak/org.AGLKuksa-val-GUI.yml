@@ -12,27 +12,24 @@ cleanup-commands:
 
 finish-args:
   - --share=ipc
+  - --share=network
   - --socket=x11
   - --socket=wayland
   - --filesystem=host
   - --device=dri
+  
 modules:
   - name: AGLKuksa-val-GUI
     buildsystem: simple
     build-commands:  
       - install -D main.py /app/bin/main.py
       - install -D Main_window.ui /app/bin/Main_window.ui
-      #- mkdir /app/bin/assets
-      - pwd
-      #- cp -r assets/* /app/bin/assets/
       - install -D run.sh /app/bin/run.sh
     sources:
       - type: file
         path: main.py
       - type: file
         path: Main_window.ui
-      #- type: dir
-      #  path: assets
       - type: file
         path: run.sh
 
